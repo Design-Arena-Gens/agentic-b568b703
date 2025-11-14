@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-color: theme("colors.slate.700") transparent;
+  scrollbar-width: thin;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(65, 103, 255, 0.15), transparent 55%),
+    linear-gradient(180deg, #070919 0%, #010104 100%);
+  min-height: 100vh;
+}
+
+.glass-card {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl;
+}
+
+.button-primary {
+  @apply flex items-center gap-2 rounded-full bg-brand-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 transition hover:bg-brand-400;
+}
+
+.button-secondary {
+  @apply rounded-full border border-white/10 px-5 py-2 text-sm font-semibold text-white/80 transition hover:border-white/30 hover:text-white;
+}
